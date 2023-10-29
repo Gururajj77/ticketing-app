@@ -40,7 +40,7 @@ const TicketForm = ({ ticket }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (EDITMODE) {
-      const res = await fetch(`http://localhost:3000/api/${ticket._id}`, {
+      const res = await fetch(`/api/${ticket._id}`, {
         method: "PUT",
         body: JSON.stringify({ formData }),
         "content-type": "application/json",
@@ -49,7 +49,7 @@ const TicketForm = ({ ticket }) => {
         throw new Error("Failed to update ticket");
       }
     } else {
-      const res = await fetch(`http://localhost:3000/api/Tickets`, {
+      const res = await fetch(`/api/Tickets`, {
         method: "POST",
         body: JSON.stringify({ formData }),
         "content-type": "application/json",
