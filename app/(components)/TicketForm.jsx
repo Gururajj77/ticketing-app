@@ -49,7 +49,7 @@ const TicketForm = ({ ticket }) => {
         throw new Error("Failed to update ticket");
       }
     } else {
-      const res = await fetch(`${window.location.origin}/api/Tickets`, {
+      const res = await fetch(`http://localhost:3000/api/Tickets`, {
         method: "POST",
         body: JSON.stringify({ formData }),
         "content-type": "application/json",
