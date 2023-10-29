@@ -1,6 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-const url =
-  "mongodb+srv://admin:nHIQaneHVZvjOft0@cluster0.ea6x3cb.mongodb.net/TicketDB";
+const url = process.env.MONGODB_URI;
 mongoose.connect(url);
 mongoose.Promise = global.Promise;
 
