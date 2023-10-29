@@ -40,7 +40,7 @@ const TicketForm = ({ ticket }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (EDITMODE) {
-      const res = await fetch(`${window.location.origin}/api/${ticket._id}`, {
+      const res = await fetch(`http://localhost:3000/api/${ticket._id}`, {
         method: "PUT",
         body: JSON.stringify({ formData }),
         "content-type": "application/json",
